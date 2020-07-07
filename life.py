@@ -44,18 +44,18 @@ def update_screen(grid):
     (Making this function more efficient and informative is a to-do)
     """
     clear_terminal()
-    print bcolors.RED + ' GAME OF LIFE' + bcolors.ENDC
-    print bcolors.YELLOW + '-'*( len(grid[0]) + 5) + bcolors.ENDC
-    print
+    print(bcolors.RED + ' GAME OF LIFE' + bcolors.ENDC)
+    print(bcolors.YELLOW + '-'*( len(grid[0]) + 5) + bcolors.ENDC)
+    print()
     for i, line in enumerate(grid):
-        print bcolors.BLUE + '%3d ' % i + bcolors.ENDC,
+        print(bcolors.BLUE + '%3d ' % i + bcolors.ENDC),
         for element in line:
             if element:
                 sys.stdout.write(bcolors.RED + str(element) + bcolors.ENDC)
             else:
                 sys.stdout.write('0')
-        print
-    print bcolors.YELLOW + '-' * ( len(grid[0]) + 5 ) + bcolors.ENDC
+        print()
+    print(bcolors.YELLOW + '-' * ( len(grid[0]) + 5 ) + bcolors.ENDC)
 
 def read_initial_conf(grid):
     """ read_initial_conf: Reads coordinates from the user to configure the
